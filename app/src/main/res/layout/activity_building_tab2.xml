@@ -152,7 +152,7 @@
                     android:entries="@array/base" />
 
                 <EditText
-                    android:id="@+id/EditText2"
+                    android:id="@+id/EditText3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -389,7 +389,7 @@
                     android:entries="@array/wall" />
 
                 <EditText
-                    android:id="@+id/EditText8"
+                    android:id="@+id/EditText3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"

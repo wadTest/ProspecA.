@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.watsana.prospec.R;
+import com.example.watsana.prospec.fragment.LandTab1Fragment;
 
 public class BankGHBActivity extends AppCompatActivity {
 

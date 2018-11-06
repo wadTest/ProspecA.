@@ -69,13 +69,13 @@ public class BuildingTab3Activity extends AppCompatActivity {
         textView29 = (TextView) findViewById(R.id.textView29);
 
         EditText1 = (EditText) findViewById(R.id.EditText1);
-        EditText2 = (EditText) findViewById(R.id.EditText2);
+        EditText2 = (EditText) findViewById(R.id.EditText3);
         EditText3 = (EditText) findViewById(R.id.EditText3);
         EditText4 = (EditText) findViewById(R.id.EditText4);
         EditText5 = (EditText) findViewById(R.id.EditText5);
         EditText6 = (EditText) findViewById(R.id.EditText6);
         EditText7 = (EditText) findViewById(R.id.EditText7);
-        EditText8 = (EditText) findViewById(R.id.EditText8);
+        EditText8 = (EditText) findViewById(R.id.EditText3);
         EditText9 = (EditText) findViewById(R.id.EditText9);
         EditText10 = (EditText) findViewById(R.id.EditText10);
         EditText11= (EditText) findViewById(R.id.EditText11);

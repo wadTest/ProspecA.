@@ -194,13 +194,13 @@ public class LandTab1Fragment extends Fragment {
 
 //        Initial View
         EditText editText1 = getView().findViewById(R.id.EditText1);
-        EditText editText2 = getView().findViewById(R.id.EditText2);
+        EditText editText2 = getView().findViewById(R.id.EditText3);
         EditText editText3 = getView().findViewById(R.id.EditText3);
         EditText editText4 = getView().findViewById(R.id.EditText4);
         EditText editText5 = getView().findViewById(R.id.EditText5);
         EditText editText6 = getView().findViewById(R.id.EditText6);
         EditText editText7 = getView().findViewById(R.id.EditText7);
-        EditText editText8 = getView().findViewById(R.id.EditText8);
+        EditText editText8 = getView().findViewById(R.id.EditText3);
         EditText editText9 = getView().findViewById(R.id.EditText9);
         EditText editText10 = getView().findViewById(R.id.EditText10);
         EditText editText11 = getView().findViewById(R.id.EditText11);

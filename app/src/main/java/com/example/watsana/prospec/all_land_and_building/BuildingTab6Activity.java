@@ -31,11 +31,11 @@ public class BuildingTab6Activity extends AppCompatActivity {
         button12 = (Button) findViewById(R.id.button12);
 
         EditText1 = (EditText) findViewById(R.id.EditText1);
-        EditText2 = (EditText) findViewById(R.id.EditText2);
+        EditText2 = (EditText) findViewById(R.id.EditText3);
         EditText4 = (EditText) findViewById(R.id.EditText4);
         EditText5 = (EditText) findViewById(R.id.EditText5);
         EditText7 = (EditText) findViewById(R.id.EditText7);
-        EditText8 = (EditText) findViewById(R.id.EditText8);
+        EditText8 = (EditText) findViewById(R.id.EditText3);
 
         imageView7 = (ImageButton) findViewById(R.id.imageView7);
 

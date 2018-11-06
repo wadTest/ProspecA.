@@ -54,7 +54,7 @@ public class LandTab8Activity extends AppCompatActivity {
         textView15 = (TextView) findViewById(R.id.textView15);
 
         EditText1 = (EditText) findViewById(R.id.EditText1);
-        EditText2 = (EditText) findViewById(R.id.EditText2);
+        EditText2 = (EditText) findViewById(R.id.EditText3);
 
         imageView7 = (ImageButton) findViewById(R.id.imageView7);
 

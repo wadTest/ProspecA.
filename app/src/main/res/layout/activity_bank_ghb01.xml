@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include
-        layout="@layout/app_bar" />
+    <include layout="@layout/app_bar" />
 
     <!--Content-->
     <ScrollView
@@ -15,14 +14,13 @@
 
         <!--From-->
         <LinearLayout
-            android:paddingBottom="50dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
 
             <!--Main ผู้กู้ราย-->
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -39,15 +37,17 @@
 
                 <!--Tile ชื่อ-สกุล-->
                 <TextView
+                    android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/oder"
                     android:layout_marginLeft="10dp"
+                    android:text="@string/oder"
                     android:textSize="@dimen/h2"
                     android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -67,14 +67,14 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="@string/telephone"
                     android:textSize="@dimen/h2"
-                    android:layout_marginLeft="10dp"
                     android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
-                    android:id="@+id/EditText2"
+                    android:id="@+id/EditText3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -94,10 +94,10 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/id_line" />
+                    android:text="@string/id_line"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
@@ -112,13 +112,13 @@
 
                 <!--Tile E-amil-->
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/email" />
+                    android:text="@string/email"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
@@ -129,19 +129,18 @@
                     android:hint="@string/not_null"
                     android:inputType="text"
                     android:textAlignment="center"
-                    android:textColorHint="@color/edit_text"  />
+                    android:textColorHint="@color/edit_text" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView7"
-                android:text="สถานที่ติดต่อ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
+                android:text="สถานที่ติดต่อ"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/h1"
-                android:textStyle="bold"  />
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -150,15 +149,17 @@
 
                 <!--Tile บ้านเลขที่-->
                 <TextView
+                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/home_numbet" />
+                    android:text="@string/home_numbet"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -169,22 +170,24 @@
 
                 <!--Tile ชื่อโครงการ-->
                 <TextView
+                    android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/project_name" />
+                    android:text="@string/project_name"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/not_null"
                     android:inputType="text"
                     android:textAlignment="center"
-                    android:textColorHint="@color/edit_text"  />
+                    android:textColorHint="@color/edit_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -194,15 +197,17 @@
 
                 <!--Tile ซอยย่อยโครงการ-->
                 <TextView
+                    android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/soi_project" />
+                    android:text="@string/soi_project"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -213,22 +218,24 @@
 
                 <!--Tile ซอยสาธารณะ-->
                 <TextView
+                    android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/public_road" />
+                    android:text="@string/public_road"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/not_null"
                     android:inputType="text"
                     android:textAlignment="center"
-                    android:textColorHint="@color/edit_text"  />
+                    android:textColorHint="@color/edit_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -238,12 +245,13 @@
 
                 <!--Tile จังหวัด-->
                 <TextView
+                    android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/province" />
+                    android:text="@string/province"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--Spinner จังหวัด-->
                 <Spinner
@@ -253,16 +261,17 @@
 
                 <!--Tile อำเภอ-->
                 <TextView
-                    android:id="@+id/spinnerAmper"
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/district1"  />
+                    android:text="@string/district1"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--Spinner อำเภอ-->
                 <Spinner
+                    android:id="@+id/spinnerAmper"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -270,49 +279,51 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <!--Tile ตำบล-->
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/district" />
+                    android:text="@string/district"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--Spinner ตำบล-->
                 <Spinner
+                    android:id="@+id/spinnerDistric"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <!--Tile รหัสไปรษณีย์-->
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/zip_code"  />
+                    android:text="@string/zip_code"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--Spinner รหัสไปรษณีย์-->
                 <Spinner
+                    android:id="@+id/spinnerZipcode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
+                android:text="สินเชื่อผู้รับเรื่อง"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/h1"
-                android:textStyle="bold"
-                android:text="สินเชื่อผู้รับเรื่อง" />
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -321,17 +332,17 @@
 
                 <!--Tile ชื่อ-สกุล-->
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/oder"
                     android:layout_marginLeft="10dp"
+                    android:text="@string/oder"
                     android:textSize="@dimen/h2"
                     android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
-                    android:id="@+id/EditText1"
+                    android:id="@+id/EditText9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -348,15 +359,17 @@
 
                 <!--Tile เลขที่บัญชีเงินกู้-->
                 <TextView
+                    android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/loan_account_number"  />
+                    android:text="@string/loan_account_number"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -367,22 +380,24 @@
 
                 <!--Tile วันที่-->
                 <TextView
+                    android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/date" />
+                    android:text="@string/date"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/not_null"
                     android:inputType="text"
                     android:textAlignment="center"
-                    android:textColorHint="@color/edit_text"  />
+                    android:textColorHint="@color/edit_text" />
             </LinearLayout>
 
             <LinearLayout
@@ -392,15 +407,17 @@
 
                 <!--Tile Campaign-->
                 <TextView
+                    android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/campaign"  />
+                    android:text="@string/campaign"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -411,22 +428,24 @@
 
                 <!--Tile วงเงินกู้-->
                 <TextView
+                    android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/loan" />
+                    android:text="@string/loan"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText13"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/not_null"
                     android:inputType="text"
                     android:textAlignment="center"
-                    android:textColorHint="@color/edit_text"  />
+                    android:textColorHint="@color/edit_text" />
             </LinearLayout>
 
             <TextView
@@ -435,10 +454,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
+                android:text="หลักประกัน"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/h1"
-                android:textStyle="bold"
-                android:text="หลักประกัน" />
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -450,13 +469,14 @@
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/deed_no"  />
+                    android:text="@string/deed_no"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
+                    android:id="@+id/EditText14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -467,44 +487,45 @@
 
                 <!--Tile เนื้อที่่ดิน-->
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/land" />
+                    android:text="@string/land"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--TextFiled-->
                 <EditText
-                    android:id="@+id/EditText6"
+                    android:id="@+id/EditText15"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/not_null"
                     android:inputType="text"
                     android:textAlignment="center"
-                    android:textColorHint="@color/edit_text"  />
+                    android:textColorHint="@color/edit_text" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <!--Tile จังหวัด-->
                 <TextView
-                    android:id="@+id/textView26"
+                    android:id="@+id/textView20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/province1" />
+                    android:text="@string/province1"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <!--Spinner จังหวัด-->
                 <Spinner
-                    android:id="@+id/spinner5"
+                    android:id="@+id/spinnerProvince1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -515,28 +536,29 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
+                android:text="วัตถุประสงค์"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/h1"
-                android:textStyle="bold"
-                android:text="วัตถุประสงค์" />
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <!--Tile วัตถุประสงค์การประเมิน-->
                 <TextView
-                    android:id="@+id/textView28"
+                    android:id="@+id/textView21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/h2"
-                    android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/loan_type" />
+                    android:text="@string/loan_type"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
 
                 <Spinner
-                    android:id="@+id/spinner6"
+                    android:id="@+id/spinnerPrapet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>

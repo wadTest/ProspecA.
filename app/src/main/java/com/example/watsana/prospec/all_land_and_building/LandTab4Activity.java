@@ -43,13 +43,13 @@ public class LandTab4Activity extends AppCompatActivity {
         textView2 = (TextView) findViewById(R.id.textView2);
 
         EditText1 = (EditText) findViewById(R.id.EditText1);
-        EditText2 = (EditText) findViewById(R.id.EditText2);
+        EditText2 = (EditText) findViewById(R.id.EditText3);
         EditText3 = (EditText) findViewById(R.id.EditText3);
         EditText4 = (EditText) findViewById(R.id.EditText4);
         EditText5 = (EditText) findViewById(R.id.EditText5);
         EditText6 = (EditText) findViewById(R.id.EditText6);
         EditText7 = (EditText) findViewById(R.id.EditText7);
-        EditText8 = (EditText) findViewById(R.id.EditText8);
+        EditText8 = (EditText) findViewById(R.id.EditText3);
 
         checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
         checkBox2 = (CheckBox) findViewById(R.id.checkBox2);

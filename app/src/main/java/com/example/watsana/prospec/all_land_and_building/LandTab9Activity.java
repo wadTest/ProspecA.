@@ -62,7 +62,7 @@ public class LandTab9Activity extends AppCompatActivity {
         textView21 = (TextView) findViewById(R.id.textView21);
 
         EditText1 = (EditText) findViewById(R.id.EditText1);
-        EditText2 = (EditText) findViewById(R.id.EditText2);
+        EditText2 = (EditText) findViewById(R.id.EditText3);
         EditText3 = (EditText) findViewById(R.id.EditText3);
         EditText4 = (EditText) findViewById(R.id.EditText4);
         EditText5 = (EditText) findViewById(R.id.EditText5);

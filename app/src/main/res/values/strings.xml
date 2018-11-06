@@ -1,6 +1,6 @@
 <resources>
 
-    <!--fragment_bank_ghb1-->
+    <!--activity_bank_ghb01-->
     <string name="oder">ชื่อ-สกุล</string>
     <string name="order">คำสั่งงาน</string>
     <string name="name">ผู้กู้ราย</string>
@@ -30,6 +30,62 @@
     <string name="province1">จังหวัด</string>
     <string name="loan_type">ประเภทเอกเงินกู้</string>
     <string name="evaluation_objectives">วัตถุประสงค์การประเมิน</string>
+
+    <!--activity_bank_ghb02-->
+    <string name="activities">กิจกรรม</string>
+    <string name="operator">ผู้ดำเนินการ</string>
+    <string name="Contact_person">ผู้รับการติดต่อ</string>
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+    <!--<string name=""></string>-->
+
 
     <!--fragment_form_land-->
     <string name="type_doc_title">ประเภทเอกสารสิทธิ์</string>

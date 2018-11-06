@@ -132,7 +132,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/EditText2"
+                    android:id="@+id/EditText3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -312,7 +312,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/EditText8"
+                    android:id="@+id/EditText3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
