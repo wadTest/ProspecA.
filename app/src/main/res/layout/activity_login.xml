@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/background"
     android:orientation="vertical"
     android:scrollbarAlwaysDrawVerticalTrack="true">
@@ -65,8 +65,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:text="ผู้สำรวจ" />
+                        android:checked="true"
+                        android:onClick="checkboxLogin"
+                        android:text="ผู้สำรวจ"
+                        android:textSize="@dimen/textSize_text03" />
 
                     <!--Select ผู้ประเมิน-->
                     <CheckBox
@@ -74,8 +76,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:text="ผู้ประเมิน" />
+                        android:checked="true"
+                        android:onClick="checkboxLogin"
+                        android:text="ผู้ประเมิน"
+                        android:textSize="@dimen/textSize_text03" />
 
                     <!--Select เป็นทั้งผู้สำรวจและผู้ประเมิน-->
                     <CheckBox
@@ -83,114 +87,380 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:text="เป็นทั้งผู้สำรวจและผู้ประเมิน" />
+                        android:checked="true"
+                        android:onClick="checkboxLogin"
+                        android:text="เป็นทั้งผู้สำรวจและผู้ประเมิน"
+                        android:textSize="@dimen/textSize_text03" />
                 </LinearLayout>
 
-                <LinearLayout
+                <android.support.v7.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#faadc7"
+                    app:cardCornerRadius="7dp">
 
-                    <!--Form ชื่อ-สกุล-->
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ชื่อ-สกุล"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
-
-                    <!--TextFiled-->
-                    <EditText
-                        android:id="@+id/EditTex1"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="text"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ชื่อ-สกุล-->
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ชื่อ-สกุล"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:id="@+id/EditTex1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="text"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:id="@+id/EditTex2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form หนังสือเลขที่-->
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="หนังสือเลขที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:id="@+id/EditTex3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ลงวันที่-->
+                            <Button
+                                android:id="@+id/buttonDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ลงวันที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <!--DatePicker-->
+                            <EditText
+                                android:id="@+id/EditTextDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardUser1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#faadc7"
+                    app:cardCornerRadius="7dp">
 
-                    <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
-
-                    <!--TextFiled-->
-                    <EditText
-                        android:id="@+id/EditTex2"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="number"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ชื่อ-สกุล-->
+                            <TextView
+                                android:id="@+id/textView03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ชื่อ-สกุล"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:id="@+id/EditTex01"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="text"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
+                            <TextView
+                                android:id="@+id/textView04"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:id="@+id/EditTex02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form หนังสือเลขที่-->
+                            <TextView
+                                android:id="@+id/textView05"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="หนังสือเลขที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:id="@+id/EditTex03"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ลงวันที่-->
+                            <Button
+                                android:id="@+id/buttonDate0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ลงวันที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <!--DatePicker-->
+                            <EditText
+                                android:id="@+id/EditTextDate0"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+
+                <android.support.v7.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardUser2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#faadc7"
+                    app:cardCornerRadius="7dp">
 
-                    <!--Form หนังสือเลขที่-->
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="หนังสือเลขที่"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
-
-                    <!--TextFiled-->
-                    <EditText
-                        android:id="@+id/EditTex3"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="number"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                    <!--Form ลงวันที่-->
-                    <Button
-                        android:id="@+id/buttonDate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ลงวันที่"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                            <!--Form ชื่อ-สกุล-->
+                            <TextView
+                                android:id="@+id/textView003"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ชื่อ-สกุล"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
 
-                    <!--TextFiled-->
-                    <!--DatePicker-->
-                    <EditText
-                        android:id="@+id/EditTextDate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="number"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                            <!--TextFiled-->
+                            <EditText
+                                android:id="@+id/EditTex001"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="text"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
+                            <TextView
+                                android:id="@+id/textView004"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:id="@+id/EditTex002"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form หนังสือเลขที่-->
+                            <TextView
+                                android:id="@+id/textView005"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="หนังสือเลขที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:id="@+id/EditTex003"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ลงวันที่-->
+                            <Button
+                                android:id="@+id/buttonDate00"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ลงวันที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <!--DatePicker-->
+                            <EditText
+                                android:id="@+id/EditTextDate00"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
 
                 <!--Topics ผู้ประเมินหลัก-->
                 <TextView
@@ -204,107 +474,123 @@
                     android:textSize="@dimen/textSize_text01"
                     android:textStyle="bold" />
 
-                <LinearLayout
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#b7e6a3"
+                    app:cardCornerRadius="7dp">
 
-                    <!--Form ชื่อ-สกุล-->
-                    <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ชื่อ-สกุล"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
-
-                    <!--TextFiled-->
-                    <EditText
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="text"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                    <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
-                    <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                            <!--Form ชื่อ-สกุล-->
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ชื่อ-สกุล"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
 
-                    <!--TextFiled-->
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="number"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="text"
+                                android:textAlignment="center" />
+                        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                    <!--Form หนังสือเลขที่-->
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="หนังสือเลขที่"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                            <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
 
-                    <!--TextFiled-->
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="number"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                    <!--Form ลงวันที่-->
-                    <Button
-                        android:id="@+id/buttonDate1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ลงวันที่"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                            <!--Form หนังสือเลขที่-->
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="หนังสือเลขที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
 
-                    <!--TextFiled-->
-                    <!--DatePicker-->
-                    <EditText
-                        android:id="@+id/EditTextDate1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="number"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ลงวันที่-->
+                            <Button
+                                android:id="@+id/buttonDate1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ลงวันที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <!--DatePicker-->
+                            <EditText
+                                android:id="@+id/EditTextDate1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
 
                 <!--Topics ผู้รับมอบอำนาจ-->
                 <TextView
@@ -318,6 +604,7 @@
                     android:textSize="@dimen/textSize_text01"
                     android:textStyle="bold" />
 
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -329,8 +616,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:text="ผู้จัดการ" />
+                        android:text="ผู้จัดการ"
+                        android:checked="true"
+                        android:onClick="checkboxLogin"
+                        android:textSize="@dimen/textSize_text03" />
 
                     <!--Select ผู้รับมอบอำนาจ-->
                     <CheckBox
@@ -338,8 +627,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:text="ผู้รับมอบอำนาจ" />
+                        android:text="ผู้รับมอบอำนาจ"
+                        android:checked="true"
+                        android:onClick="checkboxLogin"
+                        android:textSize="@dimen/textSize_text03" />
 
                     <!--Select เป็นทั้งผู้รับมอบอำนาจและผู้จัดการ-->
                     <CheckBox
@@ -347,111 +638,371 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:text="เป็นทั้งผู้รับมอบอำนาจและผู้จัดการ" />
+                        android:text="เป็นทั้งผู้รับมอบอำนาจและผู้จัดการ"
+                        android:checked="true"
+                        android:onClick="checkboxLogin"
+                        android:textSize="@dimen/textSize_text03" />
                 </LinearLayout>
 
-                <LinearLayout
+                <android.support.v7.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardPower"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#f1cea1"
+                    app:cardCornerRadius="7dp">
 
-                    <!--Form ชื่อ-สกุล-->
-                    <TextView
-                        android:id="@+id/textView11"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ชื่อ-สกุล"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <!--TextFiled-->
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="text"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                <LinearLayout
+                            <!--Form ชื่อ-สกุล-->
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ชื่อ-สกุล"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="text"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form หนังสือเลขที่-->
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="หนังสือเลขที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ลงวันที่-->
+                            <Button
+                                android:id="@+id/buttonDate2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ลงวันที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <!--DatePicker-->
+                            <EditText
+                                android:id="@+id/EditTextDate2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardPower1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#f1cea1"
+                    app:cardCornerRadius="7dp">
 
-                    <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
-                    <TextView
-                        android:id="@+id/textView12"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <!--TextFiled-->
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="number"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                <LinearLayout
+                            <!--Form ชื่อ-สกุล-->
+                            <TextView
+                                android:id="@+id/textView011"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ชื่อ-สกุล"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="text"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
+                            <TextView
+                                android:id="@+id/textView012"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form หนังสือเลขที่-->
+                            <TextView
+                                android:id="@+id/textView013"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="หนังสือเลขที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ลงวันที่-->
+                            <Button
+                                android:id="@+id/buttonDate02"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ลงวันที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <!--DatePicker-->
+                            <EditText
+                                android:id="@+id/EditTextDate02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardPower2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#f1cea1"
+                    app:cardCornerRadius="7dp">
 
-                    <!--Form หนังสือเลขที่-->
-                    <TextView
-                        android:id="@+id/textView13"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="หนังสือเลขที่"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <!--TextFiled-->
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="number"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                            <!--Form ชื่อ-สกุล-->
+                            <TextView
+                                android:id="@+id/textView0011"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ชื่อ-สกุล"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
 
-                    <!--Form ลงวันที่-->
-                    <Button
-                        android:id="@+id/buttonDate2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ลงวันที่"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="text"
+                                android:textAlignment="center" />
+                        </LinearLayout>
 
-                    <!--TextFiled-->
-                    <!--DatePicker-->
-                    <EditText
-                        android:id="@+id/EditTextDate2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="number"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form เลขที่สมาชิก/ผู้ประเมินหลัก-->
+                            <TextView
+                                android:id="@+id/textView0012"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form หนังสือเลขที่-->
+                            <TextView
+                                android:id="@+id/textView0013"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="หนังสือเลขที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ลงวันที่-->
+                            <Button
+                                android:id="@+id/buttonDate002"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ลงวันที่"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <!--DatePicker-->
+                            <EditText
+                                android:id="@+id/EditTextDate002"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="number"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
 
                 <!--Topics ธุรการ-->
                 <TextView
@@ -465,55 +1016,72 @@
                     android:textSize="@dimen/textSize_text01"
                     android:textStyle="bold" />
 
-                <LinearLayout
+                <android.support.v7.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#e7c2f7"
+                    app:cardCornerRadius="7dp">
 
-                    <!--Form ชื่อ-สกุล-->
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ชื่อ-สกุล"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
-
-                    <!--TextFiled-->
-                    <EditText
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="text"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <!--Form ชื่อ-สกุล-->
-                    <TextView
-                        android:id="@+id/textView16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ชื่อ-สกุล"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                    <!--TextFiled-->
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="text"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                            <!--Form ชื่อ-สกุล-->
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ชื่อ-สกุล"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="text"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--Form ชื่อ-สกุล-->
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="ชื่อ-สกุล"
+                                android:textSize="@dimen/textSize_text03"
+                                android:textStyle="bold" />
+
+                            <!--TextFiled-->
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:hint="@string/not_null"
+                                android:inputType="text"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
                 <!--Topics สังกัดหนวยงาน-->
                 <TextView
@@ -527,92 +1095,134 @@
                     android:textSize="@dimen/textSize_text01"
                     android:textStyle="bold" />
 
-                <LinearLayout
+                <android.support.v7.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#c4ccfa"
+                    app:cardCornerRadius="7dp">
 
-                    <!--Select ฝ่าย-->
-                    <RadioButton
-                        android:id="@+id/RadioButton1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ฝ่าย"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
-
-                    <!--TextFiled-->
-                    <EditText
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="text"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                    <!--Select สาขา-->
-                    <RadioButton
-                        android:id="@+id/RadioButton2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="สาขา"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                            <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left">
 
-                    <!--TextFiled-->
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="text"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                                <!--Select ฝ่าย-->
+                                <RadioButton
+                                    android:id="@+id/RadioButton1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="ฝ่าย"
+                                    android:textSize="@dimen/textSize_text03"
+                                    android:textStyle="bold"
+                                    android:onClick="redioLogin"
+                                    android:checked="true" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                                <!--Select สาขา-->
+                                <RadioButton
+                                    android:id="@+id/RadioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="สาขา"
+                                    android:textSize="@dimen/textSize_text03"
+                                    android:textStyle="bold"
+                                    android:onClick="redioLogin" />
 
-                    <!--Select ศูนย์-->
-                    <RadioButton
-                        android:id="@+id/RadioButton3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ศูนย์"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="@dimen/textSize_text03"
-                        android:textStyle="bold" />
+                                <!--Select ศูนย์-->
+                                <RadioButton
+                                    android:id="@+id/RadioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="ศูนย์"
+                                    android:textSize="@dimen/textSize_text03"
+                                    android:textStyle="bold"
+                                    android:onClick="redioLogin" />
+                            </RadioGroup>
+                        </LinearLayout>
 
-                    <!--TextFiled-->
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
-                        android:inputType="text"
-                        android:textAlignment="center" />
-                </LinearLayout>
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal">-->
 
-                <!--Next Report Tab1-->
-                <Button
-                    android:id="@+id/button"
+                            <!--&lt;!&ndash;TextFiled&ndash;&gt;-->
+                            <!--<EditText-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginLeft="16dp"-->
+                                <!--android:hint="@string/not_null"-->
+                                <!--android:inputType="text"-->
+                                <!--android:textAlignment="center" />-->
+
+                            <!--&lt;!&ndash;TextFiled&ndash;&gt;-->
+                            <!--<EditText-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginLeft="16dp"-->
+                                <!--android:hint="@string/not_null"-->
+                                <!--android:inputType="text"-->
+                                <!--android:textAlignment="center" />-->
+
+                            <!--&lt;!&ndash;TextFiled&ndash;&gt;-->
+                            <!--<EditText-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginLeft="16dp"-->
+                                <!--android:hint="@string/not_null"-->
+                                <!--android:inputType="text"-->
+                                <!--android:textAlignment="center" />-->
+                    <!--</LinearLayout>-->
+                        </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Next"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="@dimen/marginTop1"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="@dimen/textSize_text05" />
+                    android:orientation="horizontal">
+
+                    <!-- Sign in -->
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_button"
+                        android:text="Sign in"
+                        android:textColor="#ffff"
+                        android:textSize="@dimen/textSize_text05" />
+
+
+                    <!--Next Report Tab1-->
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_button"
+                        android:text="Next"
+                        android:textColor="#ffff"
+                        android:textSize="@dimen/textSize_text05"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
 
             </LinearLayout>
         </ScrollView>
