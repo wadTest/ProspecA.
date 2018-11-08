@@ -11,8 +11,8 @@
         android:id="@+id/login_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:layout_marginTop="22dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center_horizontal"
         android:text="Account Login"
         android:textColor="#fff"
@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_title"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_marginTop="70dp"
+        android:layout_marginRight="30dp"
         android:background="#fff"
         android:elevation="4dp"
         android:orientation="vertical"
@@ -93,8 +93,7 @@
                         android:textSize="@dimen/textSize_text03" />
                 </LinearLayout>
 
-                <android.support.v7.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cardUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -215,9 +214,7 @@
                 </android.support.v7.widget.CardView>
 
 
-
-                <android.support.v7.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cardUser1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -338,10 +335,7 @@
                 </android.support.v7.widget.CardView>
 
 
-
-
-                <android.support.v7.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cardUser2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -616,9 +610,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:text="ผู้จัดการ"
                         android:checked="true"
                         android:onClick="checkboxLogin"
+                        android:text="ผู้จัดการ"
                         android:textSize="@dimen/textSize_text03" />
 
                     <!--Select ผู้รับมอบอำนาจ-->
@@ -627,9 +621,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:text="ผู้รับมอบอำนาจ"
                         android:checked="true"
                         android:onClick="checkboxLogin"
+                        android:text="ผู้รับมอบอำนาจ"
                         android:textSize="@dimen/textSize_text03" />
 
                     <!--Select เป็นทั้งผู้รับมอบอำนาจและผู้จัดการ-->
@@ -638,14 +632,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:text="เป็นทั้งผู้รับมอบอำนาจและผู้จัดการ"
                         android:checked="true"
                         android:onClick="checkboxLogin"
+                        android:text="เป็นทั้งผู้รับมอบอำนาจและผู้จัดการ"
                         android:textSize="@dimen/textSize_text03" />
                 </LinearLayout>
 
-                <android.support.v7.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cardPower"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -654,7 +647,7 @@
                     app:cardCornerRadius="7dp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
@@ -682,6 +675,7 @@
                                 android:inputType="text"
                                 android:textAlignment="center" />
                         </LinearLayout>
+
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -764,8 +758,7 @@
                 </android.support.v7.widget.CardView>
 
 
-                <android.support.v7.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cardPower1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -774,7 +767,7 @@
                     app:cardCornerRadius="7dp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
@@ -884,8 +877,7 @@
                 </android.support.v7.widget.CardView>
 
 
-                <android.support.v7.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cardPower2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -894,7 +886,7 @@
                     app:cardCornerRadius="7dp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
@@ -1016,8 +1008,7 @@
                     android:textSize="@dimen/textSize_text01"
                     android:textStyle="bold" />
 
-                <android.support.v7.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -1095,98 +1086,117 @@
                     android:textSize="@dimen/textSize_text01"
                     android:textStyle="bold" />
 
-                <android.support.v7.widget.CardView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/redioGroup1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--Select ฝ่าย-->
+                        <RadioButton
+                            android:id="@+id/RadioButton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:checked="true"
+                            android:onClick="redioLogin"
+                            android:text="ฝ่าย"
+                            android:textSize="@dimen/textSize_text03"
+                            android:textStyle="bold" />
+
+                        <!--Select สาขา-->
+                        <RadioButton
+                            android:id="@+id/RadioButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:onClick="redioLogin"
+                            android:text="สาขา"
+                            android:checked="true"
+                            android:textSize="@dimen/textSize_text03"
+                            android:textStyle="bold" />
+
+                        <!--Select ศูนย์-->
+                        <RadioButton
+                            android:id="@+id/RadioButton3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:onClick="redioLogin"
+                            android:text="ศูนย์"
+                            android:checked="true"
+                            android:textSize="@dimen/textSize_text03"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardSungK"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    app:cardBackgroundColor="#c4ccfa"
+                    app:cardBackgroundColor="#f2f79c"
                     app:cardCornerRadius="7dp">
 
-                    <LinearLayout
+                    <!--TextFiled-->
+                    <EditText
+                        android:id="@+id/EditTexFai"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_marginLeft="16dp"
+                        android:hint="@string/not_null"
+                        android:inputType="text"
+                        android:textAlignment="center" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                </android.support.v7.widget.CardView>
 
-                            <RadioGroup
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="left">
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardSungK1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#f2f79c"
+                    app:cardCornerRadius="7dp">
 
-                                <!--Select ฝ่าย-->
-                                <RadioButton
-                                    android:id="@+id/RadioButton1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="16dp"
-                                    android:text="ฝ่าย"
-                                    android:textSize="@dimen/textSize_text03"
-                                    android:textStyle="bold"
-                                    android:onClick="redioLogin"
-                                    android:checked="true" />
 
-                                <!--Select สาขา-->
-                                <RadioButton
-                                    android:id="@+id/RadioButton2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="16dp"
-                                    android:text="สาขา"
-                                    android:textSize="@dimen/textSize_text03"
-                                    android:textStyle="bold"
-                                    android:onClick="redioLogin" />
+                    <!--TextFiled-->
+                    <EditText
+                        android:id="@+id/EditTexSaka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:hint="@string/not_null"
+                        android:inputType="text"
+                        android:textAlignment="center" />
+                </android.support.v7.widget.CardView>
 
-                                <!--Select ศูนย์-->
-                                <RadioButton
-                                    android:id="@+id/RadioButton3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="16dp"
-                                    android:text="ศูนย์"
-                                    android:textSize="@dimen/textSize_text03"
-                                    android:textStyle="bold"
-                                    android:onClick="redioLogin" />
-                            </RadioGroup>
-                        </LinearLayout>
 
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:orientation="horizontal">-->
+                <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardSungK2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#f2f79c"
+                    app:cardCornerRadius="7dp">
 
-                            <!--&lt;!&ndash;TextFiled&ndash;&gt;-->
-                            <!--<EditText-->
-                                <!--android:layout_width="match_parent"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:layout_marginLeft="16dp"-->
-                                <!--android:hint="@string/not_null"-->
-                                <!--android:inputType="text"-->
-                                <!--android:textAlignment="center" />-->
 
-                            <!--&lt;!&ndash;TextFiled&ndash;&gt;-->
-                            <!--<EditText-->
-                                <!--android:layout_width="match_parent"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:layout_marginLeft="16dp"-->
-                                <!--android:hint="@string/not_null"-->
-                                <!--android:inputType="text"-->
-                                <!--android:textAlignment="center" />-->
+                    <!--TextFiled-->
+                    <EditText
+                        android:id="@+id/EditTexSoon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:hint="@string/not_null"
+                        android:inputType="text"
+                        android:textAlignment="center" />
 
-                            <!--&lt;!&ndash;TextFiled&ndash;&gt;-->
-                            <!--<EditText-->
-                                <!--android:layout_width="match_parent"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:layout_marginLeft="16dp"-->
-                                <!--android:hint="@string/not_null"-->
-                                <!--android:inputType="text"-->
-                                <!--android:textAlignment="center" />-->
-                    <!--</LinearLayout>-->
-                        </LinearLayout>
                 </android.support.v7.widget.CardView>
 
                 <RelativeLayout
@@ -1199,8 +1209,8 @@
                         android:id="@+id/button"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
                         android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/background_button"
@@ -1214,14 +1224,14 @@
                         android:id="@+id/button1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
                         android:background="@drawable/background_button"
                         android:text="Next"
                         android:textColor="#ffff"
-                        android:textSize="@dimen/textSize_text05"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"/>
+                        android:textSize="@dimen/textSize_text05" />
                 </RelativeLayout>
 
             </LinearLayout>
