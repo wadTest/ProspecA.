@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--Toolbar-->
     <include layout="@layout/app_bar" />
 
     <!--Content-->
@@ -212,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/not_null"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:textAlignment="center"
                     android:textColorHint="@color/edit_text" />
 
@@ -292,11 +294,38 @@
                     android:textSize="@dimen/h2"
                     android:textStyle="bold" />
 
-                <!--Spinner ตำบล-->
-                <Spinner
-                    android:id="@+id/spinnerDistric"
+                <!--TextFiled-->
+                <EditText
+                    android:id="@+id/EditText3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:hint="@string/not_null"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/edit_text" />
+
+
+                <!--Tile ถนน-->
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/tanon"
+                    android:textSize="@dimen/h2"
+                    android:textStyle="bold" />
+
+                <!--TextFiled-->
+                <EditText
+                    android:id="@+id/EditText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:hint="@string/not_null"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/edit_text" />
 
                 <!--Tile รหัสไปรษณีย์-->
                 <TextView
@@ -308,11 +337,16 @@
                     android:textSize="@dimen/h2"
                     android:textStyle="bold" />
 
-                <!--Spinner รหัสไปรษณีย์-->
-                <Spinner
-                    android:id="@+id/spinnerZipcode"
+                <!--TextFiled-->
+                <EditText
+                    android:id="@+id/EditText3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:hint="@string/not_null"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/edit_text" />
             </LinearLayout>
 
             <TextView
@@ -379,8 +413,8 @@
                     android:textColorHint="@color/edit_text" />
 
                 <!--Tile วันที่-->
-                <TextView
-                    android:id="@+id/textView15"
+                <Button
+                    android:id="@+id/buttonDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -390,11 +424,11 @@
 
                 <!--TextFiled-->
                 <EditText
-                    android:id="@+id/EditText11"
+                    android:id="@+id/EditTextDate"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
-                    android:hint="@string/not_null"
+                    android:hint="@string/not_date"
                     android:inputType="text"
                     android:textAlignment="center"
                     android:textColorHint="@color/edit_text" />
@@ -422,7 +456,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/not_null"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:textAlignment="center"
                     android:textColorHint="@color/edit_text" />
 
@@ -443,7 +477,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/not_null"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:textAlignment="center"
                     android:textColorHint="@color/edit_text" />
             </LinearLayout>
@@ -502,7 +536,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/not_null"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:textAlignment="center"
                     android:textColorHint="@color/edit_text" />
             </LinearLayout>

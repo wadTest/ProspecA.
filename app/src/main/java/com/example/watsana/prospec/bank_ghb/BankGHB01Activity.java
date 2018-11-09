@@ -1,5 +1,6 @@
 package com.example.watsana.prospec.bank_ghb;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -8,15 +9,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.watsana.prospec.R;
 
-public class BankGHB01Activity extends AppCompatActivity {
+import java.util.Calendar;
+
+public class BankGHB01Activity extends AppCompatActivity implements View.OnClickListener {
 
     private Toolbar toolbar;
+    private Button buttonDate;
+    private EditText EditTextDate;
+    private int day, month, year;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +34,12 @@ public class BankGHB01Activity extends AppCompatActivity {
 
 //      Province Spinner
         provinceSpinner();
+
+//      Province1 Spinner
+        province1Spinner();
+
+//      Prapet Spinner
+        prapetSpinner();
     }
 
     //    จังหวัด อำเภอ ตำบล
@@ -59,7 +74,7 @@ public class BankGHB01Activity extends AppCompatActivity {
         Spinner spinner = findViewById(R.id.spinnerAmper);
         String[] mainAmperStrings = new String[79];
         mainAmperStrings[0] = "เลือกอำเภอ/เขต";
-        mainAmperStrings[1] = "คลองท่อม,ปลายพระยา,ลำทับ,อ่าวลึก,เกาะลันตา,เขาพนม,เมืองกระบี่,เหนือคลอง";
+        mainAmperStrings[1] = "เลือกอำเภอ/เขต,คลองท่อม,ปลายพระยา,ลำทับ,อ่าวลึก,เกาะลันตา,เขาพนม,เมืองกระบี่,เหนือคลอง";
         mainAmperStrings[2] = "คลองสาน,คลองสาน,คลองสามวา,คลองเตย,คันนายาว,จตุจักร,จอมทอง,ดอนเมือง,ดินแดง,ดุสิต,ตลิ่งชัน,ทวีวัฒนาทุ่งครุ,ธนบุรี,บางกอกน้อย,บางกอกใหญ่,บางกะปิ,บางขุนเทียน,บางคอแหลม,บางซื่อ,บางบอน,บางพลัด" +
                 ",บางรัก,บางเขน,บางแค,บึงกุ่ม,ปทุมวัน,ประเวศ,ป้อมปราบศัตรูพ่าย,พญาไท,พระนคร,พระโขนง,ภาษีเจริญ,มีนบุรี,ยานนาวา,ราชเทวี,ราษฎร์บูรณะ,ลาดกระบัง,ลาดพร้าว,วังทองหลาง,วัฒนา,สวนหลวง,สะพานสูง,สัมพันธวงศ์,สาทร,สายไหม,หนองจอก,หนองแขม,หลักสี่,ห้วยขวาง";
         mainAmperStrings[3] = "ด่านมะขามเตี้ย,ทองผาภูมิ,ท่ามะกา,ท่าม่วง,บ่อพลอย,พนมทวน,ศรีสวัสดิ์,สังขละบุรี,หนองปรือ,ห้วยกระเจา,เมืองกาญจนบุรี,เลาขวัญ,ไทรโยค";
@@ -145,6 +160,88 @@ public class BankGHB01Activity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, rowStrings);
         spinner.setAdapter(stringArrayAdapter);
 
+    }
+
+
+//     จังหวัด
+        private void province1Spinner() {
+            Spinner spinner = findViewById(R.id.spinnerProvince1);
+            String[] strings = new String[]{"เลือกจังหวัด", "กระบี่", "กรุงเทพมหานคร", "กาญจนบุรี", "กาฬสินธุ์", "กำแพงเพชร", "ขอนแก่น", "จันทบุรี", "ฉะเชิงเทรา", "ชลบุรี"
+                    , "ชัยนาท", "ชัยภูมิ", "ชุมพร", "ตรัง", "ตราด", "ตาก", "นครนายก", "นครปฐม", "นครพนม", "นครราชสีมา", "นครศรีธรรมราช", "นครสวรรค์", "นนทบุรี", "นราธิวาส",
+                    "น่าน", "บึงกาฬ", "บุรีรัมย์", "ปทุมธานี", "ประจวบคีรีขันธ์", "ปราจีนบุรี", "ปัตตานี", "พระนครศรีอยุธยา", "พะเยา", "พังงา", "พัทลุง", "พิจิตร", "พิษณุโลก", "ภูเก็ต", "มหาสารคาม",
+                    "มุกดาหาร", "ยะลา", "ยโสธร", "ระนอง", "ระยอง", "ราชบุรี", "ร้อยเอ็ด", "ลพบุรี", "ลำปาง", "ลำพูน", "ศรีสะเกษ", "สกลนคร", "สงขลา", "สตูล", "สมุทรปราการ", "สมุทรสงคราม",
+                    "สมุทรสาคร", "สระบุรี", "สระแก้ว", "สิงห์บุรี", "สุพรรณบุรี", "สุราษฎร์ธานี", "สุรินทร์", "สุโขทัย", "หนองคาย", "หนองบัวลำภู", "อำนาจเจริญ", "อุดรธานี",
+                    "อุตรดิตถ์", "อุทัยธานี", "อุบลราชธานี", "อ่างทอง", "เชียงราย", "เชียงใหม่", "เพชรบุรี", "เพชรบูรณ์", "เลย", "แพร่", "แม่ฮ่องสอน", "ประจวบคีรีขันธ์", "ชุมพร"};
+            ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(BankGHB01Activity.this,
+                    android.R.layout.simple_list_item_1, strings);
+            spinner.setAdapter(stringArrayAdapter);
+        }
+
+//     ประเภท
+    private void prapetSpinner() {
+        Spinner spinner = findViewById(R.id.spinnerPrapet);
+        String[] strings = new String[]{"เลือกวัตถุประสงค์การประเมิน", "เพื่อพิจารณาขอสินเชื่อ", "เพื่อทรามูลค่าปัจจุบัน", "เพื่อตั้งสำรองหนี้", "เพื่อซื้อทรัพย์บังคับคดี", "เพื่อวัตถุประสงค์ NPA", "Backtest"};
+        ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(BankGHB01Activity.this,
+                android.R.layout.simple_list_item_1, strings);
+        spinner.setAdapter(stringArrayAdapter);
+
+
+////     ถ้าไม่เอารหัสไปรษณ๊ย์ลบตั้งแต่ตรงนี้
+//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                createSpinnerTambon(position);
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
+//
+//    }
+//
+//    private void createSpinnerTambon(int position) {
+//
+//        Spinner spinner = findViewById(R.id.spinnerZipcode);
+//        String[] mainAmperStrings = new String[3];
+//        mainAmperStrings[0] = "เลือกอำเภอ/รหัสไปรษณีย์";
+//        mainAmperStrings[1] = "81000,81110,81120,81130,81150,81160,81170,81180,81190,80240,";
+//        mainAmperStrings[2] = "10100,10110,10120,10150,10160,10140,10160,10170,10200,10210,10220,10210,10230," +
+//                "10240,10250,10260,10300,10310,10330,10400,10500,10510,10520,10530,10600,10700,10800,10900";
+//
+//        String[] tambonStrings = mainAmperStrings[position].split(",");
+//
+//        ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(BankGHB01Activity.this,
+//                android.R.layout.simple_list_item_1, tambonStrings);
+//        spinner.setAdapter(stringArrayAdapter);
+////        จนถึงตรงนี้
+
+        buttonDate = (Button) findViewById(R.id.buttonDate);
+        EditTextDate = (EditText) findViewById(R.id.EditTextDate);
+
+//      DatePicker
+        buttonDate.setOnClickListener(this);
+    } // Main Method
+
+    @Override
+    public void onClick(View v) {
+//      DD/MM/YYYY ผู้ใช้งาน
+        if (v==buttonDate){
+            final Calendar calendar = Calendar.getInstance();
+            day = calendar.get(Calendar.DAY_OF_MONTH);
+            month = calendar.get(Calendar.MONTH);
+            year = calendar.get(Calendar.YEAR);
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker view, int year, int monthofYear, int dayOfMonth) {
+                    EditTextDate.setText(dayOfMonth + "/" + (monthofYear + 1) + "/" + year);
+                }
+            }, day, month, year);
+            datePickerDialog.show();
+        }
+
 
 //        Add toolbar to the Activity
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -176,5 +273,9 @@ public class BankGHB01Activity extends AppCompatActivity {
 
     }//Main Method
 
-    }//Main Class
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
+}//Main Class
 

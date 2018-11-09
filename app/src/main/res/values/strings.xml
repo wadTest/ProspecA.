@@ -17,11 +17,12 @@
     <string name="district">ตำบล/แขวง</string>
     <string name="district1">อำเภอ/เขต</string>
     <string name="province">จังหวัด</string>
+    <string name="tanon">ถนน</string>
     <string name="zip_code">รหัสไปรษณีย์</string>
     <string name="recipient">สินเชื่อผู้รับเรื่อง</string>
     <string name="text_name2">ชื่อ-สกุล</string>
     <string name="loan_account_number">เลขที่บัญชีเงินกู้</string>
-    <string name="date">กดเลือกวันที่</string>
+    <string name="date">วันที่รับเรื่อง</string>
     <string name="campaign">Campaign</string>
     <string name="loan">วงเงินกู้</string>
     <string name="guarantee">หลักประกัน</string>
@@ -104,6 +105,7 @@
     <string name="number5">จำนวนแปลง</string>
     <string name="ekasansit1">เอกสารสิทธิ์ที่ตั้งอาคารชุด</string>
     <string name="not_null">กรอกข้อมูล</string>
+    <string name="not_date">เลือกวันที่</string>
 
     <!--fragment_form_land2-->
     <string name="location">ที่ตั้งที่ดิน</string>

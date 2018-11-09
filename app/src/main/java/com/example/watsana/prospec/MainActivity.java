@@ -11,7 +11,7 @@ import com.example.watsana.prospec.bank_ghb.BankActivity;
 public class MainActivity extends AppCompatActivity {
 
     // Explicit
-    private static int SPLASH_TIME_OUT = 1000;
+    private static int SPLASH_TIME_OUT = 800;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
