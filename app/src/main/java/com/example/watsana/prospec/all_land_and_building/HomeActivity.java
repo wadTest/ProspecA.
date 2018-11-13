@@ -22,7 +22,7 @@ public class HomeActivity extends AppCompatActivity {
 
         loginNameString = getIntent().getStringExtra("LoginUser");
 
-        //Bind Wiget
+        //Bind Widget
         button = (Button) findViewById(R.id.button);
         button1 = (Button) findViewById(R.id.button1);
 

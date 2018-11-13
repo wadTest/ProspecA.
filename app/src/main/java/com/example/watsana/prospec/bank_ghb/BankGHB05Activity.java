@@ -14,5 +14,7 @@ public class BankGHB05Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bank_ghb05);
 
+
+
     }
 }

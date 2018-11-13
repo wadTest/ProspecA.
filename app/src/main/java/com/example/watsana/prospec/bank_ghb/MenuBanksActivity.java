@@ -42,7 +42,9 @@ public class MenuBanksActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MenuBanksActivity.this, BuildingsActivity.class));
+                Intent intent = new Intent(MenuBanksActivity.this, BuildingsActivity.class);
+                intent.putExtra("Index",1);
+                startActivity(intent);
             }
         });
 

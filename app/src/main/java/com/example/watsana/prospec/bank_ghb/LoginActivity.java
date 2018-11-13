@@ -82,50 +82,46 @@ public class LoginActivity extends AppCompatActivity {
         EditTexFai = (EditText) findViewById(R.id.EditTexFai);
         EditTexSaka = (EditText) findViewById(R.id.EditTexSaka);
         EditTexSoon = (EditText) findViewById(R.id.EditTexSoon);
-
-        cardSungK = (CardView) findViewById(R.id.cardSungK);
-        cardSungK1 = (CardView) findViewById(R.id.cardSungK1);
-        cardSungK2 = (CardView) findViewById(R.id.cardSungK2);
     }
 
-        public void redioLogin (View view) {
-            boolean checked = ((RadioButton) view).isChecked();
-            switch(view.getId()) {
-                case R.id.RadioButton1:
-                    if (checked)
-                        EditTexFai.setVisibility(View.GONE);
-                    else
-                         EditTexFai.setVisibility(View.VISIBLE);
-                    break;
+    public void redioLogin (View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+        switch(view.getId()) {
+            case R.id.RadioButton1:
+                if (checked)
+                    EditTexFai.setVisibility(View.GONE);
+                else
+                    EditTexFai.setVisibility(View.VISIBLE);
+                break;
 
-                case R.id.RadioButton2:
-                    if (checked)
-                        EditTexSaka.setVisibility(View.GONE);
-                    else
-                        EditTexSaka.setVisibility(View.VISIBLE);
-                    break;
+            case R.id.RadioButton2:
+                if (checked)
+                    EditTexSaka.setVisibility(View.GONE);
+                else
+                    EditTexSaka.setVisibility(View.VISIBLE);
+                break;
 
-                case R.id.RadioButton3:
-                    if (checked)
-                        EditTexSoon.setVisibility(View.GONE);
-                    else
-                        EditTexSoon.setVisibility(View.VISIBLE);
-                    break;
+            case R.id.RadioButton3:
+                if (checked)
+                    EditTexSoon.setVisibility(View.GONE);
+                else
+                    EditTexSoon.setVisibility(View.VISIBLE);
+                break;
 
 
-            }
+        }
 
 //      Bind Widget
-                button1 = (Button) findViewById(R.id.button1);
+        button1 = (Button) findViewById(R.id.button1);
 
 //      Get Event From Click Menu Bank
-                button1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(LoginActivity.this, MenuBanksActivity.class));
-                    }
-                });
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, MenuBanksActivity.class));
+            }
+        });
 
 
-        } // Main Method
-    } //Main Class
+    } // Main Method
+} //Main Class

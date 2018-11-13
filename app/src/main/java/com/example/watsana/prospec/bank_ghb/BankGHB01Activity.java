@@ -32,17 +32,35 @@ public class BankGHB01Activity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bank_ghb01);
 
-//      Province Spinner
+////        ADD back button
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        int id = item.getItemId();
+//
+//        if (id == android.R.id.home) {
+//
+////            end the activity
+//            this.finish();
+//        }
+//        return super.onOptionsItemSelected(item);
+
+
+//      Province Spinner จังหวัด
         provinceSpinner();
 
-//      Province1 Spinner
+//      Province1 Spinner จังหวัด
         province1Spinner();
 
-//      Prapet Spinner
+//      Prapet Spinner ประเภท
         prapetSpinner();
-    }
 
-    //    จังหวัด อำเภอ ตำบล
+    }//Main Method
+
+    //  77 จังหวัด
     private void provinceSpinner() {
         Spinner spinner = findViewById(R.id.spinnerProvince);
         String[] strings = new String[]{"เลือกจังหวัด", "กระบี่", "กรุงเทพมหานคร", "กาญจนบุรี", "กาฬสินธุ์", "กำแพงเพชร", "ขอนแก่น", "จันทบุรี", "ฉะเชิงเทรา", "ชลบุรี"
@@ -58,7 +76,7 @@ public class BankGHB01Activity extends AppCompatActivity implements View.OnClick
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                createSpinnerAmper(position);
+                createSpinnerAmper(position); // เชื่อมต่อมายังอำเภอ createSpinnerAmper
             }
 
             @Override
@@ -69,6 +87,7 @@ public class BankGHB01Activity extends AppCompatActivity implements View.OnClick
 
     }
 
+    //  อำเภอของ 77จังหวัด
     private void createSpinnerAmper(int position) {
 
         Spinner spinner = findViewById(R.id.spinnerAmper);
@@ -162,22 +181,21 @@ public class BankGHB01Activity extends AppCompatActivity implements View.OnClick
 
     }
 
+    //     77 จังหวัด
+    private void province1Spinner() {
+        Spinner spinner = findViewById(R.id.spinnerProvince1);
+        String[] strings = new String[]{"เลือกจังหวัด", "กระบี่", "กรุงเทพมหานคร", "กาญจนบุรี", "กาฬสินธุ์", "กำแพงเพชร", "ขอนแก่น", "จันทบุรี", "ฉะเชิงเทรา", "ชลบุรี"
+                , "ชัยนาท", "ชัยภูมิ", "ชุมพร", "ตรัง", "ตราด", "ตาก", "นครนายก", "นครปฐม", "นครพนม", "นครราชสีมา", "นครศรีธรรมราช", "นครสวรรค์", "นนทบุรี", "นราธิวาส",
+                "น่าน", "บึงกาฬ", "บุรีรัมย์", "ปทุมธานี", "ประจวบคีรีขันธ์", "ปราจีนบุรี", "ปัตตานี", "พระนครศรีอยุธยา", "พะเยา", "พังงา", "พัทลุง", "พิจิตร", "พิษณุโลก", "ภูเก็ต", "มหาสารคาม",
+                "มุกดาหาร", "ยะลา", "ยโสธร", "ระนอง", "ระยอง", "ราชบุรี", "ร้อยเอ็ด", "ลพบุรี", "ลำปาง", "ลำพูน", "ศรีสะเกษ", "สกลนคร", "สงขลา", "สตูล", "สมุทรปราการ", "สมุทรสงคราม",
+                "สมุทรสาคร", "สระบุรี", "สระแก้ว", "สิงห์บุรี", "สุพรรณบุรี", "สุราษฎร์ธานี", "สุรินทร์", "สุโขทัย", "หนองคาย", "หนองบัวลำภู", "อำนาจเจริญ", "อุดรธานี",
+                "อุตรดิตถ์", "อุทัยธานี", "อุบลราชธานี", "อ่างทอง", "เชียงราย", "เชียงใหม่", "เพชรบุรี", "เพชรบูรณ์", "เลย", "แพร่", "แม่ฮ่องสอน", "ประจวบคีรีขันธ์", "ชุมพร"};
+        ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(BankGHB01Activity.this,
+                android.R.layout.simple_list_item_1, strings);
+        spinner.setAdapter(stringArrayAdapter);
+    }
 
-//     จังหวัด
-        private void province1Spinner() {
-            Spinner spinner = findViewById(R.id.spinnerProvince1);
-            String[] strings = new String[]{"เลือกจังหวัด", "กระบี่", "กรุงเทพมหานคร", "กาญจนบุรี", "กาฬสินธุ์", "กำแพงเพชร", "ขอนแก่น", "จันทบุรี", "ฉะเชิงเทรา", "ชลบุรี"
-                    , "ชัยนาท", "ชัยภูมิ", "ชุมพร", "ตรัง", "ตราด", "ตาก", "นครนายก", "นครปฐม", "นครพนม", "นครราชสีมา", "นครศรีธรรมราช", "นครสวรรค์", "นนทบุรี", "นราธิวาส",
-                    "น่าน", "บึงกาฬ", "บุรีรัมย์", "ปทุมธานี", "ประจวบคีรีขันธ์", "ปราจีนบุรี", "ปัตตานี", "พระนครศรีอยุธยา", "พะเยา", "พังงา", "พัทลุง", "พิจิตร", "พิษณุโลก", "ภูเก็ต", "มหาสารคาม",
-                    "มุกดาหาร", "ยะลา", "ยโสธร", "ระนอง", "ระยอง", "ราชบุรี", "ร้อยเอ็ด", "ลพบุรี", "ลำปาง", "ลำพูน", "ศรีสะเกษ", "สกลนคร", "สงขลา", "สตูล", "สมุทรปราการ", "สมุทรสงคราม",
-                    "สมุทรสาคร", "สระบุรี", "สระแก้ว", "สิงห์บุรี", "สุพรรณบุรี", "สุราษฎร์ธานี", "สุรินทร์", "สุโขทัย", "หนองคาย", "หนองบัวลำภู", "อำนาจเจริญ", "อุดรธานี",
-                    "อุตรดิตถ์", "อุทัยธานี", "อุบลราชธานี", "อ่างทอง", "เชียงราย", "เชียงใหม่", "เพชรบุรี", "เพชรบูรณ์", "เลย", "แพร่", "แม่ฮ่องสอน", "ประจวบคีรีขันธ์", "ชุมพร"};
-            ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(BankGHB01Activity.this,
-                    android.R.layout.simple_list_item_1, strings);
-            spinner.setAdapter(stringArrayAdapter);
-        }
-
-//     ประเภท
+    //  ประเภท
     private void prapetSpinner() {
         Spinner spinner = findViewById(R.id.spinnerPrapet);
         String[] strings = new String[]{"เลือกวัตถุประสงค์การประเมิน", "เพื่อพิจารณาขอสินเชื่อ", "เพื่อทรามูลค่าปัจจุบัน", "เพื่อตั้งสำรองหนี้", "เพื่อซื้อทรัพย์บังคับคดี", "เพื่อวัตถุประสงค์ NPA", "Backtest"};
@@ -217,16 +235,17 @@ public class BankGHB01Activity extends AppCompatActivity implements View.OnClick
 //        spinner.setAdapter(stringArrayAdapter);
 ////        จนถึงตรงนี้
 
+//      Bind Widget
         buttonDate = (Button) findViewById(R.id.buttonDate);
         EditTextDate = (EditText) findViewById(R.id.EditTextDate);
 
 //      DatePicker
         buttonDate.setOnClickListener(this);
-    } // Main Method
+    }
 
     @Override
     public void onClick(View v) {
-//      DD/MM/YYYY ผู้ใช้งาน
+//      DD/MM/YYYY Login
         if (v==buttonDate){
             final Calendar calendar = Calendar.getInstance();
             day = calendar.get(Calendar.DAY_OF_MONTH);
@@ -242,7 +261,6 @@ public class BankGHB01Activity extends AppCompatActivity implements View.OnClick
             datePickerDialog.show();
         }
 
-
 //        Add toolbar to the Activity
         toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
@@ -251,7 +269,7 @@ public class BankGHB01Activity extends AppCompatActivity implements View.OnClick
         toolbar.setNavigationIcon(R.drawable.logo2);
     }
 
-    //      Add item UpLoad to Database
+//   Add item UpLoad to Database
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_land_tab, menu);
@@ -263,7 +281,7 @@ public class BankGHB01Activity extends AppCompatActivity implements View.OnClick
 
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+//      noinspection SimplifiableIfStatement
         if (id == R.id.itemUpload) {
             Toast.makeText(BankGHB01Activity.this, "อัปโหลดเสร็จ", Toast.LENGTH_LONG).show();
             return true;
@@ -271,7 +289,7 @@ public class BankGHB01Activity extends AppCompatActivity implements View.OnClick
 
         return super.onOptionsItemSelected(item);
 
-    }//Main Method
+    }
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {

@@ -68,6 +68,7 @@
                         android:checked="true"
                         android:onClick="checkboxLogin"
                         android:text="ผู้สำรวจ"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/textSize_text03" />
 
                     <!--Select ผู้ประเมิน-->
@@ -79,6 +80,7 @@
                         android:checked="true"
                         android:onClick="checkboxLogin"
                         android:text="ผู้ประเมิน"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/textSize_text03" />
 
                     <!--Select เป็นทั้งผู้สำรวจและผู้ประเมิน-->
@@ -90,6 +92,7 @@
                         android:checked="true"
                         android:onClick="checkboxLogin"
                         android:text="เป็นทั้งผู้สำรวจและผู้ประเมิน"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/textSize_text03" />
                 </LinearLayout>
 
@@ -118,6 +121,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ชื่อ-สกุล"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -129,7 +133,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="text"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -144,6 +149,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -155,7 +161,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -170,6 +177,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="หนังสือเลขที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -181,7 +189,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -196,6 +205,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ลงวันที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -206,9 +216,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
-                                android:hint="@string/not_null"
+                                android:hint="@string/not_date"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -239,6 +250,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ชื่อ-สกุล"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -250,7 +262,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="text"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -265,6 +278,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -276,7 +290,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -291,6 +306,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="หนังสือเลขที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -302,7 +318,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -317,6 +334,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ลงวันที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -327,13 +345,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
-                                android:hint="@string/not_null"
+                                android:hint="@string/not_date"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-
 
                 <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/cardUser2"
@@ -360,6 +378,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ชื่อ-สกุล"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -371,7 +390,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="text"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -386,6 +406,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -397,7 +418,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -412,6 +434,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="หนังสือเลขที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -423,7 +446,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -438,6 +462,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ลงวันที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -448,9 +473,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
-                                android:hint="@string/not_null"
+                                android:hint="@string/not_date"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -492,6 +518,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ชื่อ-สกุล"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -502,7 +529,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="text"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -517,6 +545,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -527,7 +556,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -542,6 +572,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="หนังสือเลขที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -550,9 +581,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
-                                android:hint="@string/not_null"
+                                android:hint="@string/not_date"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -567,6 +599,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ลงวันที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -577,9 +610,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
-                                android:hint="@string/not_null"
+                                android:hint="@string/not_date"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -613,6 +647,7 @@
                         android:checked="true"
                         android:onClick="checkboxLogin"
                         android:text="ผู้จัดการ"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/textSize_text03" />
 
                     <!--Select ผู้รับมอบอำนาจ-->
@@ -624,6 +659,7 @@
                         android:checked="true"
                         android:onClick="checkboxLogin"
                         android:text="ผู้รับมอบอำนาจ"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/textSize_text03" />
 
                     <!--Select เป็นทั้งผู้รับมอบอำนาจและผู้จัดการ-->
@@ -635,6 +671,7 @@
                         android:checked="true"
                         android:onClick="checkboxLogin"
                         android:text="เป็นทั้งผู้รับมอบอำนาจและผู้จัดการ"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/textSize_text03" />
                 </LinearLayout>
 
@@ -663,6 +700,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ชื่อ-สกุล"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -673,7 +711,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="text"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
 
@@ -689,6 +728,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -699,7 +739,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -714,6 +755,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="หนังสือเลขที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -724,7 +766,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -739,6 +782,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ลงวันที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -749,9 +793,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
-                                android:hint="@string/not_null"
+                                android:hint="@string/not_date"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -783,6 +828,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ชื่อ-สกุล"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -793,7 +839,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="text"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -808,6 +855,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -818,7 +866,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -833,6 +882,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="หนังสือเลขที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -843,7 +893,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -858,6 +909,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ลงวันที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -868,9 +920,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
-                                android:hint="@string/not_null"
+                                android:hint="@string/not_date"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -902,6 +955,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ชื่อ-สกุล"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -912,7 +966,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="text"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -927,6 +982,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="เลขที่สมาชิก/ผู้ประเมินหลัก"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -937,7 +993,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -952,6 +1009,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="หนังสือเลขที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -962,7 +1020,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -977,6 +1036,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ลงวันที่"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -987,9 +1047,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
-                                android:hint="@string/not_null"
+                                android:hint="@string/not_date"
                                 android:inputType="number"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1033,6 +1094,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ชื่อ-สกุล"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -1043,7 +1105,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="text"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -1058,6 +1121,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="16dp"
                                 android:text="ชื่อ-สกุล"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/textSize_text03"
                                 android:textStyle="bold" />
 
@@ -1068,7 +1132,8 @@
                                 android:layout_marginLeft="16dp"
                                 android:hint="@string/not_null"
                                 android:inputType="text"
-                                android:textAlignment="center" />
+                                android:textAlignment="center"
+                                android:textColorHint="@color/edit_text" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -1107,6 +1172,7 @@
                             android:checked="true"
                             android:onClick="redioLogin"
                             android:text="ฝ่าย"
+                            android:textColor="@android:color/black"
                             android:textSize="@dimen/textSize_text03"
                             android:textStyle="bold" />
 
@@ -1116,9 +1182,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="16dp"
+                            android:checked="true"
                             android:onClick="redioLogin"
                             android:text="สาขา"
-                            android:checked="true"
+                            android:textColor="@android:color/black"
                             android:textSize="@dimen/textSize_text03"
                             android:textStyle="bold" />
 
@@ -1128,9 +1195,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="16dp"
+                            android:checked="true"
                             android:onClick="redioLogin"
                             android:text="ศูนย์"
-                            android:checked="true"
+                            android:textColor="@android:color/black"
                             android:textSize="@dimen/textSize_text03"
                             android:textStyle="bold" />
                     </RadioGroup>
@@ -1151,9 +1219,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
-                        android:hint="@string/not_null"
                         android:inputType="text"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColorHint="@color/edit_text" />
 
                 </android.support.v7.widget.CardView>
 
@@ -1174,7 +1242,8 @@
                         android:layout_marginLeft="16dp"
                         android:hint="@string/not_null"
                         android:inputType="text"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColorHint="@color/edit_text" />
                 </android.support.v7.widget.CardView>
 
 
@@ -1195,7 +1264,8 @@
                         android:layout_marginLeft="16dp"
                         android:hint="@string/not_null"
                         android:inputType="text"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColorHint="@color/edit_text" />
 
                 </android.support.v7.widget.CardView>
 

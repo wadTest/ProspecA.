@@ -99,6 +99,9 @@
             android:name=".bank_ghb.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".bank_ghb.BankGHB02Activity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".bank_ghb.BankGHB03Activity"
             android:screenOrientation="portrait" />
         <activity
@@ -129,6 +132,7 @@
             android:screenOrientation="portrait" />
 
         <activity android:name=".FormLandActivity" />
+
 
 
     </application>

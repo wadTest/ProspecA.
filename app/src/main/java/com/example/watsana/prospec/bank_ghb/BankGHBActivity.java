@@ -48,7 +48,7 @@ public class BankGHBActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BankGHBActivity.this, BankGHB01Activity.class);
+                Intent intent = new Intent(BankGHBActivity.this, BankGHB02Activity.class);
                 intent.putExtra("Index",1);
                 startActivity(intent);
             }
@@ -128,7 +128,7 @@ public class BankGHBActivity extends AppCompatActivity {
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BankGHBActivity.this, BankGHB09Activity.class);
+                Intent intent = new Intent(BankGHBActivity.this, BankGHB10Activity.class);
                 intent.putExtra("Index",9);
                 startActivity(intent);
             }
